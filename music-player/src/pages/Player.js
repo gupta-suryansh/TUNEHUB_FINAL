@@ -81,7 +81,7 @@ const Player = ({ user, onLogout }) => {
   return (
     <div className="player-container">
       <header className="player-header">
-        <div className="brand">Music Player</div>
+        <div className="brand">TuneHub</div>
         <div className="user-info">
           <span>{user?.name}</span>
           <button onClick={() => navigate('/profile')} className="profile-btn">
