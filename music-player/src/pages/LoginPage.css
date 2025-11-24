@@ -1,0 +1,238 @@
+/* src/pages/LoginPage.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #121212, #1a1a1a);
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.login-card {
+  background: rgba(32, 32, 32, 0.9);
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.login-card h1 {
+  margin: 0 0 15px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #b3b3b3;
+  margin: 0 auto 30px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 90%;
+  position: relative;
+}
+
+.allowed-domains {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #1db954;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder {
+  color: #666;
+}
+
+.password-requirements {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  text-align: left;
+}
+
+.password-requirements p {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.password-requirements ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.password-requirements li {
+  margin-bottom: 4px;
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.password-requirements li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #1db954;
+  font-weight: bold;
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(145deg, #1db954, #1ed760);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
+  background: linear-gradient(145deg, #1ed760, #1db954);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.switch-mode {
+  margin-top: 25px;
+  color: #888;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.switch-button {
+  background: none;
+  border: none;
+  color: #1db954;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0 5px 5px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.switch-button:hover {
+  color: #1ed760;
+  text-decoration: none;
+}
+
+.switch-button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  width: 0;
+  height: 2px;
+  background: #1db954;
+  transition: width 0.3s ease;
+}
+
+.switch-button:hover:after {
+  width: calc(100% - 5px);
+}
+
+.error-message {
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff6b6b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-align: left;
+  border-left: 3px solid #ff3b30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-message i {
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: left;
+  background: #222;
+  color: white;
+  animation: fadeIn 0.25s ease-out forwards;
+}
